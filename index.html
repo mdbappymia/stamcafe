@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stamcafé</title>
+    <link rel="shortcut icon" href="./img/radio-img.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="img-area">
+          <img id="myImg" src="" alt="image" />
+        </div>
+        <h2 class="audio-title">Stamcafé</h2>
+        <div class="audio-title">
+          <div class="title" id="title"></div>
+        </div>
+        <div class="control-btn">
+          <div class="play-button-area">
+            <i
+              id="playbutton"
+              class="play-icon fas fa-play"
+              onclick="clicToPlay()"
+            ></i>
+            <i
+              id="pausebutton"
+              class="pause-icon fas fa-pause"
+              onclick="clicToPause()"
+            ></i>
+          </div>
+        </div>
+        <br />
+
+        <div class="volune-control">
+          <i class="v-icon fas fa-volume-down"></i>
+          <input
+            type="range"
+            class="slider"
+            id="slider"
+            value="100"
+            maxlength="100"
+          />
+
+          <i class="v-icon fas fa-volume-up"></i>
+        </div>
+      </div>
+    </div>
+
+    <audio id="myaudio">
+      <source src="https://hetstamcafe.stream-server.nl/stream" />
+    </audio>
+    <script src="./js/vendors/all.min.js"></script>
+    <script src="./js/vendors/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
